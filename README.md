@@ -40,3 +40,38 @@ MCP-demo/
 ├── client.py # CLI client that sends expressions to the server
 ├── requirements.txt
 └── README.md # This file — explains it all
+
+## Implementation
+1. Clone the Repository
+git clone https://github.com/your-username/MCP-demo.git
+cd MCP-demo
+
+2. Install Requirements
+pip install -r requirements.txt
+
+Or manually:
+
+pip install fastapi uvicorn requests
+
+3. Start the Server
+uvicorn server:app --reload
+
+Visit http://127.0.0.1:8000/docs
+ to test the API in the browser!
+
+4. Run the CLI Client
+
+In a new terminal window:
+
+python client.py
+
+
+Then enter expressions:
+
+>> 2+3
+Result: 5
+
+>> 10/0
+[Server Error] Division by zero
+
+>> exit
